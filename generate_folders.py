@@ -24,4 +24,4 @@ for folder in main_list:
 	else:
 		os.makedirs(main_path)
 
-
+print("Enter anything to exit: " + input())
