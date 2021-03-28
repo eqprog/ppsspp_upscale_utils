@@ -54,5 +54,22 @@ else:
 			print(f"Successfully copied {dir} to {master_path}")
 
 finally:
-	print("Enter anything to exit...")
-print(input())
+	print("Texture directory creation finished.")
+
+print("Now let's create temporary directories for sorting!")
+try:
+	os.makedirs("sorting")
+except:
+	print("Sorting directory: OK!")
+
+tempdirs = input("Sorting folder names, separate with commas: ")
+tempdirs_list = tempdirs.split(", ")
+
+for tempdir in tempdirs_list:
+	try:
+		os.makedirs(tempdir)
+	except:
+		print(f"Error when creating \'{tempdir}\'!")
+
+print("Folder creation finished")
+exit = input("Enter any key to exit!")
